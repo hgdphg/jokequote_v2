@@ -7,11 +7,13 @@ import { Route, IndexRoute } from 'react-router'
 // your current file is.
 import CoreLayout from 'layouts/CoreLayout'
 import HomeView from 'views/HomeView'
+import HomePage from 'views/HomePage'
 import AboutView from 'views/AboutView'
 
 export default (
   <Route path='/' component={CoreLayout}>
-    <IndexRoute component={HomeView} />
+    <IndexRoute component={HomePage} />
+    <Route path='/view' component={HomeView} />
     <Route path='/about' component={AboutView} />
   </Route>
 )

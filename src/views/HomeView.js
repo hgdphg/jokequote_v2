@@ -20,23 +20,39 @@ export class HomeView extends React.Component {
 
   render () {
     return (
-      <div className='container text-center'>
-        <h1>Welcome to Joke Quote</h1>
-        <h2>
-          Sample Counter:&nbsp;
-          <span className={styles['counter--green']}>{this.props.counter}</span>
-        </h2>
-        <button className='btn btn-default'
-                onClick={() => this.props.increment(1)}>
-          Increment
-        </button>
-        <button className='btn btn-default'
-                onClick={this.props.doubleAsync}>
-          Double (Async)
-        </button>
-        <hr />
-        <Link to='/about'>Go To About View</Link>
-      </div>
+        <div className='container'>
+          <div className='row'>
+            <div className={styles['homepage']}>
+              <div className='col-md-9'>
+                <h1>Welcome to Joke Quote</h1>
+                <h2>
+                  Sample Counter:&nbsp;
+                  <span className={styles['counter--green']}>{this.props.counter}</span>
+                </h2>
+                <button className='btn btn-default'
+                        onClick={() => this.props.increment(1)}>
+                  Increment
+                </button>
+                <button className='btn btn-default'
+                        onClick={this.props.doubleAsync}>
+                  Double (Async)
+                </button>
+                <hr />
+                <Link to='/about'>Go To About View</Link>
+              </div>
+            </div>
+            <div className='col-md-3'>
+              <div className='well sidebar-nav'>
+                <ul className = 'nav nav-list'>
+                  <li className='nav-header'>Sidebar</li>
+                  <li><Link to='/'>HomePage</Link></li>
+                  <li><Link to='/view'>HomeView</Link></li>
+                  <li><Link to='/about'>About</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
     )
   }
 }
