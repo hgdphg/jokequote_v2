@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { actions as counterActions } from '../redux/modules/counter'
-import styles from './HomeView.scss'
+import styles from './HomePage.scss'
 
 // We define mapStateToProps where we'd normally use
 // the @connect decorator so the data requirements are clear upfront, but then
@@ -20,25 +20,39 @@ export class HomePage extends React.Component {
 
   render () {
     return (
-        <div className='container'>
-            <div className={styles['homepage']}>
-              <h1>Welcome to Joke Quote</h1>
-              <h2>
-                Sample Counter:&nbsp;
-                <span className={styles['counter--green']}>{this.props.counter}</span>
-              </h2>
-              <button className='btn btn-default'
+      <div className='container'>
+          <div className={styles['homepage']}>
+            <div className={styles['titleofhomepage']}>
+              <h3>Wellcome to JokeQuote, happy everyday and never feel sad</h3>
+              <h5>If you sad, remember has many don't have tooth</h5>
+            </div>
+            <div className={styles['joke_content_homepage']}>
+              <h4>
+                Title
+              </h4>
+              <h5>
+                Content Content Content Content Content Content Content Content Content Content Content Content
+                Content Content Content Content Content Content Content Content Content Content Content Content
+                Content Content Content Content Content Content Content Content Content Content Content Content
+                Content Content Content Content Content Content Content Content Content Content Content Content
+                Content Content Content Content Content Content Content Content Content Content Content Content
+                Content Content Content Content Content Content Content Content Content Content Content Content
+              </h5>
+            </div>
+            <div className={styles['buttonarea']}>
+              <button className='btn btn-primary'
                       onClick={() => this.props.increment(1)}>
                 Increment
               </button>
-              <button className='btn btn-default'
+              <button className='btn btn-success'
                       onClick={this.props.doubleAsync}>
                 Double (Async)
               </button>
-              <hr />
-              <Link to='/view'>Go To Home View</Link>
             </div>
-        </div>
+            <hr />
+            <Link to='/view'>Go To Home View</Link>
+          </div>
+      </div>
     )
   }
 }

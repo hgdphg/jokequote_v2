@@ -1,0 +1,46 @@
+.counter {
+  font-weight: bold;
+}
+
+.counter--green {
+  composes: counter;
+  color: rgb(25,200,25);
+}
+
+.homepage {
+  text-align: center;
+}
+
+.titleofhomepage {
+  height: 150px;
+  margin-top: -40px;
+  margin-right: -250px;
+  margin-left: -250px;
+  background: #00af6b;
+  color: white;
+  text-align: center;
+  h3 {
+    padding-top: 50px;
+  }
+}
+
+.buttonarea{
+  text-align: center;
+  button {
+    width: 20%;
+    color: white;
+    margin-left: 5px;
+    }
+}
+
+.joke_content_homepage {
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 5%;
+  vertical-align: bottom;
+  padding-left: 15%;
+  padding-right: 15%;
+  .end_content {
+    text-align: center;
+  }
+}
