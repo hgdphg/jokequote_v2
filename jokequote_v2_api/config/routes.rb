@@ -1,12 +1,22 @@
 
 Rails.application.routes.draw do
 
-  resources :users
+  scope module: 'api' do
+    namespace :v1 do
+      devise_for :users
+      devise_scope :api_user do
+      post    '/signup',  to: 'registrations#create'
+      post    '/login',   to: 'user/session#new'
+      delete  '/logout',  to: 'session#destroy'
+  end
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'session#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
