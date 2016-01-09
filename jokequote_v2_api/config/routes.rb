@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   scope module: 'api' do
     namespace :v1 do
         devise_for :users
+
+
+        resources :joke_contents, except: [:new, :edit]
     end
   end
 
