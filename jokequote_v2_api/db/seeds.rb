@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(username: 'admin', emails: 'adin@g.com', password: 'admin')
-User.create(username: 'mod', emails: 'mod@g.com', password: 'mod')
+User.create(username: 'admin', email: 'adin@g.com', password: 'admin')
+User.create(username: 'mod', email: 'mod@g.com', password: 'mod')
 
 JokeContent.create(title: "truyen so 1", content: "truyen so 1")
 JokeContent.create(title: "truyen so 2", content: "truyen so 2")
